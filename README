@@ -1,0 +1,13 @@
+
+
+This archive contains the distribution Unicode-CaseFold,
+version 0.01:
+
+  Unicode case-folding for case-insensitive lookups.
+
+This software is copyright (c) 2011 by Andrew Rodland.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+
