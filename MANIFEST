@@ -12,3 +12,4 @@ lib/Unicode/CaseFold.pm
 lib/Unicode/CaseFold.xs
 lib/Unicode/CaseFoldPP.pm
 t/10fold.t
+t/release-pp-10fold.t

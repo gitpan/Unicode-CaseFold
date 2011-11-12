@@ -1,4 +1,15 @@
 #!perl
+
+use Test::More;
+
+BEGIN {
+    unless ( $ENV{RELEASE_TESTING} ) {
+        plan skip_all => 'these tests are for testing by the release';
+    }
+
+    $ENV{PERL_UNICODE_CASEFOLD_PP} = 1;
+}
+
 use strict;
 use warnings;
 use utf8;
@@ -171,4 +182,5 @@ SKIP: {
   );
   table_test(@test_table);
 }
+
 

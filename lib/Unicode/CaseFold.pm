@@ -3,7 +3,7 @@ package Unicode::CaseFold;
 # ABSTRACT: Unicode case-folding for case-insensitive lookups.
 
 BEGIN {
-  our $VERSION = '0.01'; # VERSION
+  our $VERSION = '0.02'; # VERSION
 }
 our $AUTHORITY = 'cpan:ARODLAND'; # AUTHORITY
 
@@ -12,7 +12,6 @@ use warnings;
 
 use 5.008001;
 
-use Unicode::UCD ();
 use Scalar::Util 1.11 ();
 require Exporter;
 
@@ -20,7 +19,7 @@ our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(case_fold);
 our @EXPORT = qw(fc);
 
-our $SIMPLE_FOLDING = $^V lt v5.10.0;
+our $SIMPLE_FOLDING;
 our $XS = 0;
 
 BEGIN {
@@ -34,10 +33,10 @@ BEGIN {
         ? ${ $Unicode::CaseFold::{VERSION} }
         : ()
       );
-      $SIMPLE_FOLDING = 0;
     };
     die $@ if $@ && $@ !~ /object version|loadable object/;
     $XS = 1 unless $@;
+    $SIMPLE_FOLDING = 0 unless $@;
   }
   if (!$XS) {
     require Unicode::CaseFoldPP;
@@ -73,7 +72,7 @@ Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
