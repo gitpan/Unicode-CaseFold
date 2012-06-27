@@ -20,7 +20,7 @@ my %module_build_args = (
     "Andrew Rodland <arodland\@cpan.org>"
   ],
   "dist_name" => "Unicode-CaseFold",
-  "dist_version" => "0.02",
+  "dist_version" => "0.03",
   "license" => "perl",
   "module_name" => "Unicode::CaseFold",
   "need_compiler" => 0,

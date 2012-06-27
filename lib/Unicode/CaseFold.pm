@@ -3,7 +3,7 @@ package Unicode::CaseFold;
 # ABSTRACT: Unicode case-folding for case-insensitive lookups.
 
 BEGIN {
-  our $VERSION = '0.02'; # VERSION
+  our $VERSION = '0.03'; # VERSION
 }
 our $AUTHORITY = 'cpan:ARODLAND'; # AUTHORITY
 
@@ -72,7 +72,7 @@ Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -207,7 +207,7 @@ Andrew Rodland <arodland@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Andrew Rodland.
+This software is copyright (c) 2012 by Andrew Rodland.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
