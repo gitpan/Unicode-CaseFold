@@ -3,7 +3,7 @@ package Unicode::CaseFold;
 # ABSTRACT: Unicode case-folding for case-insensitive lookups.
 
 BEGIN {
-  our $VERSION = '0.03'; # VERSION
+  our $VERSION = '1.00'; # VERSION
 }
 our $AUTHORITY = 'cpan:ARODLAND'; # AUTHORITY
 
@@ -62,7 +62,7 @@ BEGIN {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -72,7 +72,7 @@ Unicode::CaseFold - Unicode case-folding for case-insensitive lookups.
 
 =head1 VERSION
 
-version 0.03
+version 1.00
 
 =head1 SYNOPSIS
 
@@ -147,7 +147,7 @@ won't case-fold C<$_> if called without an argument.
 
 Whether the XS extension is in use. The pure-perl implementation is 5-10 times
 slower than the XS extension, and on versions of perl before 5.10.0 it will
-use simple case-folding instead of pure case-folding (see below).
+use simple case-folding instead of full case-folding (see below).
 
 =head2 $Unicode::CaseFold::SIMPLE_FOLDING
 
@@ -207,13 +207,9 @@ Andrew Rodland <arodland@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Andrew Rodland.
+This software is copyright (c) 2014 by Andrew Rodland.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
